@@ -7,4 +7,4 @@ RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-8.5.16/* /usr/local/tomcat/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
-COPY target/myweb-0.0.5.war /usr/local/tomcat/webapps/
+COPY /var/lib/jenkins/workspace/Java-Web-App=Docker/target/myweb-0.0.5.war /usr/local/tomcat/webapps/
